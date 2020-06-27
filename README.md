@@ -12,6 +12,17 @@ How this works: This application takes text in the textfield and using RAKE algo
                 and application provides the more data about that keyword.
                 
  [  Wondering how RAKE algorithm works? ]
- 
-        
- 
+ 		
+		In this first the text splits (parsed) into the set of candidates' keywords. First, the document text is split into an array of words then this array
+		is then split into sequences of contiguous words at phrase delimiters and stop word positions.
+		
+		After every candidate keyword that is identified, a score is calculated with the help of word co-occurance graph
+		
+		The score for each candidate keyword is computed by the formula K=deg(t)/freq(t)
+		
+		The score of the keyword is computed as the sum of its member keyword score
+		
+		After candidate keywords are scored, the top T scoring candidates are selected as keywords for the document. 
+		
+Still in confusion??
+Follow this link for PPT on RAKE:
